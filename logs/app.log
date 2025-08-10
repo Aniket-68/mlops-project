@@ -1,1 +1,34 @@
-2025-08-10 22:35:46,226 - INFO - ✅ Successfully loaded latest version of 'HousingModel'
+2025-08-10 23:36:56,966 - ERROR - Failed to load model 'HousingModel': RESOURCE_DOES_NOT_EXIST: Registered Model with name=HousingModel not found
+2025-08-10 23:40:33,197 - ERROR - Failed to load model 'HousingModel': RESOURCE_DOES_NOT_EXIST: Registered Model with name=HousingModel not found
+2025-08-10 23:40:37,898 - ERROR - Failed to load model 'HousingModel': RESOURCE_DOES_NOT_EXIST: Registered Model with name=HousingModel not found
+2025-08-10 23:40:42,343 - ERROR - Failed to load model 'HousingModel': RESOURCE_DOES_NOT_EXIST: Registered Model with name=HousingModel not found
+2025-08-10 23:40:50,117 - ERROR - Failed to load model 'HousingModel': RESOURCE_DOES_NOT_EXIST: Registered Model with name=HousingModel not found
+2025-08-10 23:41:00,615 - ERROR - Failed to load model 'HousingModel': RESOURCE_DOES_NOT_EXIST: Registered Model with name=HousingModel not found
+2025-08-10 23:41:32,869 - ERROR - Failed to load model 'HousingModel': RESOURCE_DOES_NOT_EXIST: Registered Model with name=HousingModel not found
+2025-08-10 23:42:14,115 - ERROR - Failed to load model 'HousingModel': RESOURCE_DOES_NOT_EXIST: Registered Model with name=HousingModel not found
+2025-08-10 23:42:36,598 - ERROR - Failed to load model 'HousingModel': RESOURCE_DOES_NOT_EXIST: Registered Model with name=HousingModel not found
+2025-08-10 23:42:58,194 - ERROR - Failed to load model 'HousingModel': RESOURCE_DOES_NOT_EXIST: Registered Model with name=HousingModel not found
+2025-08-10 23:43:05,422 - ERROR - Failed to load model 'HousingModel': RESOURCE_DOES_NOT_EXIST: Registered Model with name=HousingModel not found
+2025-08-10 23:43:19,356 - ERROR - Failed to load model 'HousingModel': RESOURCE_DOES_NOT_EXIST: Registered Model with name=HousingModel not found
+2025-08-10 23:43:32,629 - ERROR - Failed to load model 'HousingModel': RESOURCE_DOES_NOT_EXIST: Registered Model with name=HousingModel not found
+2025-08-10 23:43:40,853 - ERROR - Failed to load model 'HousingModel': RESOURCE_DOES_NOT_EXIST: Registered Model with name=HousingModel not found
+2025-08-10 23:43:45,301 - ERROR - Failed to load model 'HousingModel': RESOURCE_DOES_NOT_EXIST: Registered Model with name=HousingModel not found
+2025-08-10 23:47:09,755 - ERROR - Failed to load model 'HousingModel': RESOURCE_DOES_NOT_EXIST: Registered Model with name=HousingModel not found
+2025-08-10 23:47:14,239 - ERROR - Failed to load model 'HousingModel': RESOURCE_DOES_NOT_EXIST: Registered Model with name=HousingModel not found
+2025-08-10 23:47:25,912 - ERROR - Failed to load model 'HousingModel': RESOURCE_DOES_NOT_EXIST: Registered Model with name=HousingModel not found
+2025-08-10 23:48:24,511 - ERROR - Failed to load model 'HousingModel': RESOURCE_DOES_NOT_EXIST: Registered Model with name=HousingModel not found
+2025-08-10 23:48:41,298 - ERROR - Failed to load model 'HousingModel': RESOURCE_DOES_NOT_EXIST: Registered Model with name=HousingModel not found
+2025-08-10 23:52:10,577 - INFO - Successfully loaded latest version of 'HousingModel'
+2025-08-10 23:52:17,515 - INFO - Successfully loaded latest version of 'HousingModel'
+2025-08-10 23:52:24,682 - INFO - Successfully loaded latest version of 'HousingModel'
+2025-08-10 23:53:32,780 - INFO - Successfully loaded latest version of 'HousingModel'
+2025-08-10 23:53:39,781 - INFO - Successfully loaded latest version of 'HousingModel'
+2025-08-10 23:53:46,640 - INFO - Successfully loaded latest version of 'HousingModel'
+2025-08-11 00:33:39,870 - INFO - Successfully loaded latest version of 'HousingModel'
+2025-08-11 00:33:47,652 - INFO - Successfully loaded latest version of 'HousingModel'
+2025-08-11 00:33:56,480 - INFO - Successfully loaded latest version of 'HousingModel'
+2025-08-11 01:10:14,122 - INFO - Successfully loaded latest version of 'HousingModel'
+2025-08-11 01:13:30,071 - INFO - Successfully loaded latest version of 'HousingModel'
+2025-08-11 01:13:38,171 - INFO - Successfully loaded latest version of 'HousingModel'
+2025-08-11 01:19:57,476 - INFO - Successfully loaded latest version of 'HousingModel'
+2025-08-11 01:20:02,059 - INFO - Prediction made: Input={'MedInc': 8.3252, 'HouseAge': 41.0, 'AveRooms': 6.9841, 'AveBedrms': 1.0238, 'Population': 100.0, 'AveOccup': 2.5556, 'Latitude': 38.88, 'Longitude': -122.23}, Output=81.96317569429672
