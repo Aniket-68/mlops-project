@@ -109,7 +109,7 @@ def preprocess_data():
         logging.info("Data preprocessed and saved to data/train.csv and data/test.csv.")
 
     except Exception as e:
-        logging.error(f"Preprocessing failedw: {str(e)}")
+        logging.error(f"Preprocessing failedS: {str(e)}")
         raise
 
 if __name__ == "__main__":
