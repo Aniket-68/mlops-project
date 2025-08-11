@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 import mlflow
 import mlflow.sklearn
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, field_validator
 import pandas as pd
 import logging
 import sqlite3
@@ -59,14 +59,30 @@ PREDICTIONS_COUNTER = Counter("total_predictions", "Total number of predictions 
 app = FastAPI(title="Housing Price Prediction API")
 
 class HousingInput(BaseModel):
-    MedInc: float
-    HouseAge: float
-    AveRooms: float
-    AveBedrms: float
-    Population: float
-    AveOccup: float
-    Latitude: float
-    Longitude: float
+    MedInc: float = Field(..., ge=0.0, le=15.0, description="Median income in tens of thousands")
+    HouseAge: float = Field(..., ge=1.0, le=52.0, description="Median house age in years")
+    AveRooms: float = Field(..., ge=1.0, le=140.0, description="Average number of rooms per dwelling")
+    AveBedrms: float = Field(..., ge=0.5, le=35.0, description="Average number of bedrooms per dwelling")
+    Population: float = Field(..., ge=3.0, le=35000.0, description="Block group population")
+    AveOccup: float = Field(..., ge=0.5, le=500.0, description="Average number of household members")
+    Latitude: float = Field(..., ge=32.5, le=42.0, description="Latitude in degrees")
+    Longitude: float = Field(..., ge=-124.5, le=-114.0, description="Longitude in degrees")
+
+    @field_validator("AveBedrms")
+    @classmethod
+    def validate_bedrooms_vs_rooms(cls, v, values):
+        if "AveRooms" in values and v > values["AveRooms"]:
+            raise ValueError("AveBedrms cannot exceed AveRooms")
+        return v
+
+    @field_validator("Latitude", "Longitude")
+    @classmethod
+    def validate_location(cls, v, info):
+        if info.field_name == "Latitude" and not (32.5 <= v <= 42.0):
+            raise ValueError("Latitude must be within California's range (32.5 to 42.0)")
+        if info.field_name == "Longitude" and not (-124.5 <= v <= -114.0):
+            raise ValueError("Longitude must be within California's range (-124.5 to -114.0)")
+        return v
 
 @app.post("/predict")
 def predict(input_data: HousingInput):

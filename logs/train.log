@@ -1,0 +1,8 @@
+2025-08-11 17:21:39,342 - INFO - Successfully loaded training data from 'data/train.csv'
+2025-08-11 17:21:39,342 - INFO - Starting training for model: LinearRegression
+2025-08-11 17:21:45,546 - INFO - LinearRegression training completed. MSE=0.4548
+2025-08-11 17:21:45,572 - INFO - Starting training for model: DecisionTree
+2025-08-11 17:21:48,242 - INFO - DecisionTree training completed. MSE=0.4952
+2025-08-11 17:21:48,269 - INFO - Selected LinearRegression as the best model.
+2025-08-11 17:21:51,026 - INFO - Model HousingModel version 12 registered successfully.
+2025-08-11 17:21:51,026 - INFO - Training pipeline completed. Model HousingModel version 12 is ready.
