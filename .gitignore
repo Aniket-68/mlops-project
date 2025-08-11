@@ -1,0 +1,6 @@
+/data/train.csv
+/data/test.csv
+/logs
+/models
+/mlartifacts
+/mlruns

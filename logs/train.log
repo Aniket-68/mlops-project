@@ -6,3 +6,12 @@
 2025-08-11 17:21:48,269 - INFO - Selected LinearRegression as the best model.
 2025-08-11 17:21:51,026 - INFO - Model HousingModel version 12 registered successfully.
 2025-08-11 17:21:51,026 - INFO - Training pipeline completed. Model HousingModel version 12 is ready.
+2025-08-11 17:35:35,351 - INFO - Successfully loaded training data from 'data/train.csv'
+2025-08-11 17:35:35,380 - INFO - Starting training for model: LinearRegression
+2025-08-11 17:35:41,515 - INFO - LinearRegression training completed. MSE=0.4548
+2025-08-11 17:35:41,538 - INFO - Starting training for model: DecisionTree
+2025-08-11 17:35:44,365 - INFO - DecisionTree training completed. MSE=0.4952
+2025-08-11 17:35:44,400 - INFO - Selected LinearRegression as the best model.
+2025-08-11 17:35:44,401 - INFO - Best model saved to models\model.pkl
+2025-08-11 17:35:47,375 - INFO - Model HousingModel version 13 registered successfully.
+2025-08-11 17:35:47,375 - INFO - Training pipeline completed. Model HousingModel version 13 is ready.
