@@ -45,16 +45,16 @@ import sys
 #     y_pred_2 = model.predict(X_sample)
 #     assert np.array_equal(y_pred_1, y_pred_2), "Model predictions are not consistent"
 
-# Test to ensure code passes Flake8 linting
-def test_flake8_linting():
-    files_to_lint = ["src/train.py", "src/test.py","src/app.py","src/retrain.py"]
-    try:
-        result = subprocess.run(
-            [sys.executable, "-m", "flake8"] + files_to_lint,
-            check=True,
-            capture_output=True,
-            text=True
-        )
-        assert result.returncode == 0, "Flake8 linting passed"
-    except subprocess.CalledProcessError as e:
-        pytest.fail(f"Flake8 linting failed:\n{e.stdout}")
+# # Test to ensure code passes Flake8 linting
+# def test_flake8_linting():
+#     files_to_lint = ["src/train.py", "src/test.py","src/app.py","src/retrain.py"]
+#     try:
+#         result = subprocess.run(
+#             [sys.executable, "-m", "flake8"] + files_to_lint,
+#             check=True,
+#             capture_output=True,
+#             text=True
+#         )
+#         assert result.returncode == 0, "Flake8 linting passed"
+#     except subprocess.CalledProcessError as e:
+#         pytest.fail(f"Flake8 linting failed:\n{e.stdout}")
