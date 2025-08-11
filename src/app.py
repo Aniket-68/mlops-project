@@ -70,8 +70,8 @@ class HousingInput(BaseModel):
 
     @field_validator("AveBedrms")
     @classmethod
-    def validate_bedrooms_vs_rooms(cls, v, values):
-        if "AveRooms" in values and v > values["AveRooms"]:
+    def validate_bedrooms_vs_rooms(cls, v, info):
+        if 'AveRooms' in info.data and v > info.data['AveRooms']:
             raise ValueError("AveBedrms cannot exceed AveRooms")
         return v
 
@@ -118,3 +118,5 @@ def metrics():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
+
