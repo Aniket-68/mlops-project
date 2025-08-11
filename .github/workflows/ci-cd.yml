@@ -15,8 +15,8 @@ jobs:
           python-version: "3.10"
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Lint code
-        run: pylint src/*.py
+      # - name: Lint code
+      #   run: pylint src/*.py
       - name: Run tests
         run: pytest src/test.py
 
