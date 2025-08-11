@@ -6,13 +6,12 @@ import pandas as pd
 import logging
 import sqlite3
 import os
+from prometheus_client import Counter, generate_latest, CONTENT_TYPE_LATEST
+from fastapi.responses import Response
 
 # ---------------------------
 # Configuration
 # ---------------------------
-# MLFLOW_TRACKING_URI = "http://localhost:5000"
-
-# Set MLflow tracking URI (default to localhost for local runs)
 mlflow_tracking_uri = os.getenv("MLFLOW_TRACKING_URI", "http://localhost:5000")
 mlflow.set_tracking_uri(mlflow_tracking_uri)
 
@@ -42,13 +41,17 @@ conn.close()
 # ---------------------------
 # MLflow Setup
 # ---------------------------
-# mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
 try:
     model = mlflow.sklearn.load_model(f"models:/{MODEL_NAME}/latest")
     logging.info(f"Successfully loaded latest version of '{MODEL_NAME}'")
 except Exception as e:
     logging.error(f"Failed to load model '{MODEL_NAME}': {str(e)}")
     raise RuntimeError(f"Model loading failed: {str(e)}")
+
+# ---------------------------
+# Prometheus Metrics
+# ---------------------------
+PREDICTIONS_COUNTER = Counter("total_predictions", "Total number of predictions made")
 
 # ---------------------------
 # FastAPI App
@@ -72,6 +75,9 @@ def predict(input_data: HousingInput):
         df = pd.DataFrame([input_data.dict()])
         prediction = float(model.predict(df)[0])
 
+        # Increment Prometheus counter
+        PREDICTIONS_COUNTER.inc()
+
         # Log prediction to DB
         with sqlite3.connect(DB_PATH) as conn:
             conn.execute(
@@ -88,16 +94,10 @@ def predict(input_data: HousingInput):
         raise HTTPException(status_code=500, detail=f"Prediction failed: {str(e)}")
 
 @app.get("/metrics")
-def get_metrics():
-    """Retrieve total number of predictions made."""
-    try:
-        with sqlite3.connect(DB_PATH) as conn:
-            count = conn.execute("SELECT COUNT(*) FROM predictions").fetchone()[0]
-        return {"total_predictions": count}
-
-    except Exception as e:
-        logging.error(f"Metrics retrieval error: {str(e)}")
-        raise HTTPException(status_code=500, detail=f"Metrics retrieval failed: {str(e)}")
+def metrics():
+    """Prometheus metrics endpoint."""
+    data = generate_latest()
+    return Response(content=data, media_type=CONTENT_TYPE_LATEST)
 
 if __name__ == "__main__":
     import uvicorn
