@@ -58,3 +58,8 @@ import sys
 #         assert result.returncode == 0, "Flake8 linting passed"
 #     except subprocess.CalledProcessError as e:
 #         pytest.fail(f"Flake8 linting failed:\n{e.stdout}")
+
+def test_dummy():
+    assert mean_squared_error([1,2], [1,2]) == 0
+
+

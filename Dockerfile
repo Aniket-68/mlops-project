@@ -7,6 +7,7 @@ RUN pip install -r requirements.txt
 
 COPY src/ ./src/
 COPY logs/ ./logs/
+COPY models/ ./models/
 COPY mlruns/ ./mlruns/  
 
 # Set MLflow URI to access host's server
