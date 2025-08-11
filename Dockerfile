@@ -16,5 +16,3 @@ ENV MLFLOW_TRACKING_URI=http://host.docker.internal:5000
 EXPOSE 8000
 
 CMD ["uvicorn", "src.app:app", "--host", "0.0.0.0", "--port", "8000"]
-
-CMD ["/bin/bash", "-c", "python retrain.py && uvicorn src.app:app --host 0.0.0.0 --port 8000"]
