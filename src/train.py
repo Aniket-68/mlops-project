@@ -89,7 +89,7 @@ else:
 
 # Save the best model to models/model.pkl ( Latest Model )
 try:
-    model_path = os.path.join(MODEL_DIR, "model.pkl")
+    model_path = os.path.join(MODEL_DIR, "latest_model.pkl")
     with open(model_path, "wb") as f:
         pickle.dump(best_model, f)
     logging.info(f"Best model saved to {model_path}")

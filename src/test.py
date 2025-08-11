@@ -19,7 +19,7 @@ def california_data():
 # Fixture to load the trained model
 @pytest.fixture
 def model():
-    model_path = Path("models/model.pkl")
+    model_path = Path("../models/latest_model.pkl")
     assert model_path.exists(), f"Model file {model_path} does not exist"
     with open(model_path, "rb") as f:
         return pickle.load(f)
