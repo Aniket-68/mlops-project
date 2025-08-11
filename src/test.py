@@ -47,7 +47,7 @@ import sys
 
 # Test to ensure code passes Flake8 linting
 def test_flake8_linting():
-    files_to_lint = ["src/train.py", "test.py"]
+    files_to_lint = ["src/train.py", "src/test.py","src/app.py","src/retrain.py"]
     try:
         result = subprocess.run(
             [sys.executable, "-m", "flake8"] + files_to_lint,
