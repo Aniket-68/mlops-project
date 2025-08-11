@@ -32,5 +32,5 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and push Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/ca-housing-mlops-project:latest .
-          docker push ${{ secrets.DOCKER_USERNAME }}/ca-housing-mlops-project:latest
+          docker build -t aniket68/ca-housing-mlops-project:latest .
+          docker push aniket68/ca-housing-mlops-project:latest
