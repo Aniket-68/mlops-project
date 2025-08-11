@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/f028d5b3d2b649cfbb85b73f3ab4c007/artifacts
+end_time: 1754910267496
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f028d5b3d2b649cfbb85b73f3ab4c007
+run_name: LinearRegression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754910261048
+status: 3
+tags: []
+user_id: Aniket

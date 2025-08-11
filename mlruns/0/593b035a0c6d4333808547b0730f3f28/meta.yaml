@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/593b035a0c6d4333808547b0730f3f28/artifacts
+end_time: 1754910881789
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 593b035a0c6d4333808547b0730f3f28
+run_name: DecisionTree
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754910878413
+status: 3
+tags: []
+user_id: Aniket

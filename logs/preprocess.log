@@ -1,0 +1,19 @@
+2025-08-11 16:33:39,773 - INFO - Fetching California Housing dataset...
+2025-08-11 16:33:39,839 - INFO - Dataset loaded with 20640 rows and 9 columns.
+2025-08-11 16:33:39,839 - INFO - Starting data cleaning...
+2025-08-11 16:33:39,845 - INFO - No missing values found.
+2025-08-11 16:33:39,869 - INFO - Removed 681 outliers from MedInc.
+2025-08-11 16:33:39,877 - INFO - Removed 0 outliers from HouseAge.
+2025-08-11 16:33:39,879 - INFO - Removed 439 outliers from AveRooms.
+2025-08-11 16:33:39,879 - INFO - Removed 1116 outliers from AveBedrms.
+2025-08-11 16:33:39,885 - INFO - Removed 1063 outliers from Population.
+2025-08-11 16:33:39,887 - INFO - Removed 528 outliers from AveOccup.
+2025-08-11 16:33:39,888 - INFO - Removed 0 outliers from Latitude.
+2025-08-11 16:33:39,890 - INFO - Removed 0 outliers from Longitude.
+2025-08-11 16:33:39,890 - WARNING - Negative values found in Longitude. Replacing with median.
+2025-08-11 16:33:39,893 - INFO - Data cleaning completed.
+2025-08-11 16:33:39,893 - INFO - Scaling features...
+2025-08-11 16:33:39,899 - INFO - Features scaled successfully.
+2025-08-11 16:33:39,899 - INFO - Splitting data into train and test sets...
+2025-08-11 16:33:39,903 - INFO - Train set: 13450 rows, Test set: 3363 rows.
+2025-08-11 16:33:40,038 - INFO - Data preprocessed and saved to data/train.csv and data/test.csv.

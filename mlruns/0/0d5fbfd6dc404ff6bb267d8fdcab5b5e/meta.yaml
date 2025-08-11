@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/0d5fbfd6dc404ff6bb267d8fdcab5b5e/artifacts
+end_time: 1754911275457
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0d5fbfd6dc404ff6bb267d8fdcab5b5e
+run_name: BestModel
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754911272303
+status: 3
+tags: []
+user_id: Aniket

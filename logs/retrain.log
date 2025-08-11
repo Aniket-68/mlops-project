@@ -1,0 +1,60 @@
+2025-08-11 16:22:38,438 - INFO - DVC status output: Data and pipelines are up to date.
+2025-08-11 16:22:38,438 - INFO - No data changes detected.
+2025-08-11 16:24:14,324 - INFO - DVC status output: preprocess:
+	changed outs:
+		modified:           data\train.csv
+2025-08-11 16:24:14,324 - INFO - Data changed, re-running training...
+2025-08-11 16:26:36,985 - INFO - DVC status output: preprocess:
+	changed outs:
+		modified:           data\train.csv
+2025-08-11 16:26:36,985 - INFO - Data changed, re-running training...
+2025-08-11 16:27:07,003 - INFO - Training completed.
+2025-08-11 16:31:45,509 - INFO - DVC status output: preprocess:
+	changed deps:
+		modified:           src\preprocess.py
+2025-08-11 16:31:45,511 - INFO - Data changed, re-running training...
+2025-08-11 16:32:03,833 - INFO - Training completed.
+2025-08-11 16:34:17,929 - INFO - DVC status output: preprocess:
+	changed deps:
+		modified:           src\preprocess.py
+	changed outs:
+		modified:           data\test.csv
+2025-08-11 16:34:17,931 - INFO - Data changed, re-running training...
+2025-08-11 16:34:34,801 - INFO - Training completed.
+2025-08-11 16:35:49,474 - INFO - DVC status output: preprocess:
+	changed deps:
+		modified:           src\preprocess.py
+	changed outs:
+		modified:           data\test.csv
+2025-08-11 16:35:49,474 - INFO - Data changed, re-running training...
+2025-08-11 16:36:05,940 - INFO - Training completed.
+2025-08-11 16:41:49,539 - ERROR - DVC status check failed: ERROR: unrecognized arguments: --show-md5
+
+2025-08-11 16:41:49,540 - ERROR - Training or DVC commit failed: ERROR: unrecognized arguments: --show-md5
+
+2025-08-11 16:44:28,743 - INFO - DVC status output:
+preprocess:
+	changed deps:
+		modified:           src\preprocess.py
+	changed outs:
+		modified:           data\train.csv
+		modified:           data\test.csv
+
+2025-08-11 16:44:28,743 - INFO - Data or dependencies changed, re-running training...
+2025-08-11 16:44:45,699 - INFO - Training completed successfully.
+2025-08-11 16:44:46,878 - ERROR - Training or DVC commit failed: None
+2025-08-11 16:50:59,646 - INFO - DVC status output:
+preprocess:
+	changed deps:
+		modified:           src\preprocess.py
+	changed outs:
+		modified:           data\train.csv
+		modified:           data\test.csv
+
+2025-08-11 16:50:59,646 - INFO - Data or dependencies changed, re-running training...
+2025-08-11 16:51:16,005 - INFO - Training completed successfully.
+2025-08-11 16:51:23,709 - INFO - Training outputs committed to DVC.
+2025-08-11 16:51:26,918 - INFO - DVC status output:
+Data and pipelines are up to date.
+
+2025-08-11 16:51:26,918 - INFO - No data or dependency changes detected.

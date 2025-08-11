@@ -5,14 +5,14 @@ stages:
     deps:
     - path: src/preprocess.py
       hash: md5
-      md5: 22c24bc1fbd71308e9cbae77cc7d43c8
-      size: 769
+      md5: f31fd12261ae316130d9f052dc7d0cf0
+      size: 4403
     outs:
     - path: data/test.csv
       hash: md5
-      md5: 29272bef3e7288e003c325d4a58b1dba
-      size: 687106
+      md5: 3cbd896d3aec842064adf630cb2991bc
+      size: 562608
     - path: data/train.csv
       hash: md5
-      md5: 868ce36e45bdecbe93c598fb6c7ba10b
-      size: 2747717
+      md5: b596e3894cbec5150239212461fc4eab
+      size: 2250556
